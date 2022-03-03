@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("./assets/dark-mode-08.jpeg");
+    
+}
+ 
+ul li {
+    list-style: none;
+    
+}
+ul li:hover .goTo {
+    visibility: visible;
+}
+ul li a {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(165, 165, 165);
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    
+}
+.goTo {
+    position: absolute;
+    right: 30px;
+    visibility: hidden;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: grey;
+    font-size: 18px;
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.sideBar{
+    width: 400px;
+    height: 100vh;
+    display: grid;
+    border: 1px solid rgb(158, 158, 158);
+    padding-left: 50px;
+    padding-right: 30px;
+    backdrop-filter: blur(18px);
+    border-radius: 10px;
+  
+}
+.logo{
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgb(226, 226, 226) ;
+}
+.logo p {
+    font-family: 'Bebas Neue', cursive;;
+    color: white;
+    font-size: 36px;
+}
+.menu  p {
+ margin-bottom: 10px;
+}
+.category  p {
+    margin-bottom: 10px;
+   }
+   .general  p {
+    margin-bottom: 10px;
+   }
+ul li {
+    margin-bottom: 20px;
+}
+picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+picture img {
+    width: 40px
+}
+.account  {
+    display: flex;
+}
+.icon {
+    margin-right: 15px;
+}
