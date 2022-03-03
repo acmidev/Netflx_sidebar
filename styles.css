@@ -1,4 +1,12 @@
+:root {
+    --dark-background: #070718;
+    --primary-color:  #DB060F;
+}
+
+
 *{
+    
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,6 +14,7 @@
 body{
     background-image: url("./assets/20474323.jpeg");
     background-size: 100%;
+    overflow-x: hidden;
     
     
 }
@@ -22,13 +31,13 @@ ul li {
 }
 ul li:hover {
     transition: all 0.4s ease-in-out;
-    border-left: 5px solid red;
+    border-left: 5px solid var(--primary-color);
     
 
 }
 ul li:active {
     transition: all 0.4s ease-in-out;
-    border-left: 5px solid red;
+    border-left: 5px solid var(--primary-color);
 }
 ul li:hover a{
     transition: all 0.4s ease-in-out;
@@ -81,7 +90,9 @@ p {
     border: 1px solid rgba(214, 214, 214, 0.37);
     padding-right: 30px;
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     border-radius: 10px;
+    position: fixed;
   
 }
 .logo{
@@ -152,7 +163,7 @@ picture img {
     line-height: 20px;
     text-align: center;
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--primary-color);
     margin-left: 150px;
 }
 #app {
@@ -161,11 +172,156 @@ picture img {
     right: 0;
     width: calc(100% - 350px);
     height: 100vh;
-    opacity: 1;
-    background-color: aliceblue;
+    
 }
 
 /* Browse*/
-.random p {
-    color: red;
+.browse-container {
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-background);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr auto auto auto;
+
 }
+.browse-navbar {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-around;
+    height: 60px;
+    
+}
+.browse-nav {
+    width: 500px;
+}
+.browse-navbar input {
+    width: 160px;
+    height: 40px;
+    background-color: var(--dark-background);
+    box-shadow: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    justify-content: flex-end;
+}
+.browse-nav ul{
+    display: flex;
+   /* background-color: var(--primary-color);
+   */
+   justify-content: space-around;
+   
+}
+.browse-nav ul li  {
+    border: none;
+}
+.browse-nav ul li:hover  {
+    border: none;
+}
+.browse-nav button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #b8b8b8;
+    transition: all 0.1s ease-in-out;
+    line-height: 40px;
+}
+
+.browse-nav button:hover {
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+    color: white;
+}
+.browse-header {
+    width: 100%;
+    height: 440px;
+}
+.browse-header picture {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.browse-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    
+    
+}
+.browse-header h2 {
+    position: absolute;
+    color: #b8b8b8;
+    top: 450px;
+    font-size: 40px;
+    margin-left: 40px;
+    font-family: 'Bebas Neue', cursive;;
+}
+
+.browse-movies {
+    margin-top: 50px;
+    display:  flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.browse-movies div {
+    min-width: 200px;
+    max-width: 280px;
+}
+.browse-movies div img {
+    width: 100%;
+}
+.browse-movies h3 {
+    position: absolute;
+    color: #b8b8b8;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    top: -40px;
+    left: 20px;
+    
+}
+.browse-series {
+    margin-top: 50px;
+    display:  flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.browse-series div {
+    min-width: 200px;
+    max-width: 280px;
+}
+.browse-series div img {
+    width: 100%;
+}
+.browse-series h3 {
+    position: absolute;
+    color: #b8b8b8;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    top: -40px;
+    left: 20px;
+    
+}
+.browse-games {
+    margin-top: 50px;
+    display:  flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+.browse-games div {
+    min-width: 200px;
+    max-width: 280px;
+}
+.browse-games div img {
+    width: 100%;
+}
+.browse-games h3 {
+    position: absolute;
+    color: #b8b8b8;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    top: -40px;
+    left: 20px;
+    
+}
+
