@@ -26,6 +26,10 @@ ul li:hover {
     
 
 }
+ul li:active {
+    transition: all 0.4s ease-in-out;
+    border-left: 5px solid red;
+}
 ul li:hover a{
     transition: all 0.4s ease-in-out;
     font-weight: bold;
@@ -86,7 +90,10 @@ p {
     margin-bottom: 30px;
     
 }
-.logo p {
+.logo a {
+    text-decoration: none;
+}
+.logo  a p {
     font-family: 'Bebas Neue', cursive;;
     color: white;
     font-size: 36px;
@@ -147,4 +154,18 @@ picture img {
     border-radius: 50%;
     background-color: red;
     margin-left: 150px;
+}
+#app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 350px);
+    height: 100vh;
+    opacity: 1;
+    background-color: aliceblue;
+}
+
+/* Browse*/
+.random p {
+    color: red;
 }
