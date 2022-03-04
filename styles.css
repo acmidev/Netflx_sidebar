@@ -1,6 +1,8 @@
 :root {
     --dark-background: #070718;
     --primary-color:  #DB060F;
+    --light-color: #cbcbcb;
+    --text-family:  'Open Sans', sans-serif;
 }
 
 
@@ -307,6 +309,7 @@ picture img {
     display:  flex;
     justify-content: space-evenly;
     position: relative;
+    margin-bottom: 60px;
 }
 .browse-games div {
     min-width: 200px;
@@ -325,3 +328,98 @@ picture img {
     
 }
 
+
+
+/*Settings*/
+.settings-container {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: var(--dark-background);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 280px 60px  auto;
+}
+
+.settings-container h2 {
+    color: var(--light-color);
+    font-size: 26px;
+    font-family: var(--text-family) ;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.settings-container h3 {
+    color: #b8b8b8;
+    font-family: var(--text-family);
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.settings-account{
+    max-width: 1200px;
+    height: auto;
+}
+.settings-account-info {
+    position: relative;
+   
+}
+.settings-account-info ul {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.settings-account-info ul li {
+    display: flex;
+    
+
+}
+.settings-account-info ul li p:nth-child(2){
+   position: absolute;
+   left: 200px;
+   
+
+}
+.settings-account-info ul li button{
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    background: none;
+    color: rgb(44, 81, 243);
+    font-family: var(--text-family);
+    border: none;
+}
+.settings-suscription{
+    width: 80%;
+    justify-self: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.settings-suscription p {
+    color: var(--dark-background);
+}
+.suscription-card p:first-child {
+    font-size: 28px;
+}
+.suscription-card p:nth-child(2) {
+    font-size: 12px;
+    color: rgb(80, 80, 80);
+}
+.suscription-card p:nth-child(3) {
+    font-size: 18px;
+    color: rgb(44, 81, 243);
+    
+}
+
+
+
+.settings-suscription div {
+    width: 180px;
+    height: 110px;
+    background-color: #b8b8b8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
