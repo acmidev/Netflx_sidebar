@@ -1,5 +1,7 @@
 'use strict';
 
+ 
+
 
 (function () {
     function init() {
@@ -19,6 +21,20 @@
     }
     init();
 }());
+firstData()
+
+
+
+function firstData(){
+    const profileName = document.getElementById('sidebar-name')
+    var retrievedUSer = JSON.parse(localStorage.getItem('user'))
+    profileName.innerText = retrievedUSer.name
+
+    
+
+
+}
+
 
 
 
