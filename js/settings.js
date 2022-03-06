@@ -7,6 +7,7 @@ const observer = new MutationObserver(function(mutations) {
       previousUrl = location.href;
       console.log(`URL changed to ${location.href}`);
       showData()
+      saveLocal()
       
      
 
