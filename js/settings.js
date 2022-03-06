@@ -1,10 +1,18 @@
-window.onre
+        var retrievedUSer = JSON.parse(localStorage.getItem('user'))
+        const profileName = document.getElementById('sidebar-name')
+        profileName.innerText = retrievedUSer.name
 let previousUrl = '';
 const observer = new MutationObserver(function(mutations) {
   if (location.href !== previousUrl) {
       previousUrl = location.href;
       console.log(`URL changed to ${location.href}`);
       showData()
+      
+     
+
+
+
+      
       
 
       
@@ -67,8 +75,6 @@ function saveLocal(){
                     const password = infoInput.value
                     user = { "name": retrievedUSer.name, "password": retrievedUSer.password, "email": retrievedUSer.email, "phone": retrievedUSer.phone}
                     user = {...user, password}
-                    console.log(user)
-                    console.log(user.name)
                     localStorage.setItem('user', JSON.stringify(user))
                     passwordHolder.innerText = retrievedUSer.password
 
@@ -298,9 +304,5 @@ function showData(){
 
    
 }
-
-
-
-
 
 

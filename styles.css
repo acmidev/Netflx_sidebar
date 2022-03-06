@@ -40,6 +40,17 @@ ul li:hover {
     
 
 }
+.active-item{
+    transition: all 0.4s ease-in-out;
+    border-left: 5px solid var(--primary-color);
+
+}
+.active-item a{
+    transition: all 0.4s ease-in-out;
+    font-weight: bold;
+    color: white;
+}
+
 ul li:active {
     transition: all 0.4s ease-in-out;
     border-left: 5px solid var(--primary-color);
@@ -81,6 +92,26 @@ p {
     font-family: 'Open Sans', sans-serif;
     color: #cbcbcb;
     font-size: 18px;
+}
+div img {
+    transition: all 0.2s ease;
+    box-shadow:
+  1.2px 1.1px 2.2px rgba(134, 134, 134, 0.092),
+  2.8px 2.7px 5.3px rgba(78, 78, 78, 0.126),
+  5.3px 5px 10px rgba(59, 59, 59, 0.155),
+  9.4px 8.9px 17.9px rgba(43, 43, 43, 0.188),
+  17.5px 16.7px 33.4px rgba(32, 32, 32, 0.233),
+  42px 40px 80px rgba(12, 12, 12, 0.3)
+;
+
+}
+div img:hover{
+    transition: all 0.2s linear;
+   position: relative;
+    transform: scale(1.1);
+}
+div picture img:hover {
+    transform: none;
 }
 
 .main-container{
