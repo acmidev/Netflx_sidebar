@@ -1,5 +1,17 @@
+window.onre
+let previousUrl = '';
+const observer = new MutationObserver(function(mutations) {
+  if (location.href !== previousUrl) {
+      previousUrl = location.href;
+      console.log(`URL changed to ${location.href}`);
+      showData()
+      
 
-
+      
+    }
+});
+const config = {subtree: true, childList: true};
+observer.observe(document, config);
 
 
 function saveLocal(){
@@ -267,12 +279,18 @@ function changeInfo(id){
 
 
 function showData(){
+    if(location.href == "http://127.0.0.1:5500/index.html#settings" ){
+
         var retrievedUSer = JSON.parse(localStorage.getItem('user'))
-        console.log(retrievedUSer)
-        
-        passwordHolder = document.getElementById('info-password')
-        emailHolder = document.getElementById('info-email')
-        phoneHolder = document.getElementById('info-phone')
+        const nameHolder = document.getElementById('info-name')
+        const passwordHolder = document.getElementById('info-password')
+        const emailHolder = document.getElementById('info-email')
+        const phoneHolder = document.getElementById('info-phone')
+            nameHolder.innerText = retrievedUSer.name
+            passwordHolder.innerText = retrievedUSer.password
+            emailHolder.innerText = retrievedUSer.email
+            phoneHolder.innerText = retrievedUSer.phone
+    }
     
 
    
@@ -281,7 +299,7 @@ function showData(){
    
 }
 
-     
+
 
 
 
